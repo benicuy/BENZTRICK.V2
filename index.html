@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>SENSIX β • HENPEEX • DPI MASTER • QUANTUM_Ω 🌌</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="quantum-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="title">SENSIX <span style="color:#ff00ff;">β</span> | HENPEEX <span style="font-size:20px;">🌌Ω</span></div>
+            <div class="badge">ID-242955 | QUANTUM_ACTIVE 🔥 | DPI MASTER</div>
+        </div>
+
+        <!-- SECTION DPI SUPER LENGKAP -->
+        <div class="dpi-master-section">
+            <div class="section-title">🔥 SMART SWITCH DPI & PPI (FULL CONTROL) 🔥</div>
+            
+            <!-- Preset DPI -->
+            <div class="dpi-presets">
+                <span>Preset Cepat:</span>
+                <button class="preset-dpi" data-dpi="160">160 (Low)</button>
+                <button class="preset-dpi" data-dpi="240">240 (Medium)</button>
+                <button class="preset-dpi" data-dpi="320">320 (Standar)</button>
+                <button class="preset-dpi" data-dpi="400">400 (HD)</button>
+                <button class="preset-dpi" data-dpi="480">480 (Ultra HD)</button>
+                <button class="preset-dpi" data-dpi="640">640 (Quantum+) 🌌</button>
+            </div>
+
+            <!-- Custom DPI & PPI -->
+            <div class="dpi-custom">
+                <label>📱 Custom DPI: 
+                    <input type="number" id="customDpi" value="320" step="1" min="120" max="800">
+                </label>
+                <label>📱 Custom PPI: 
+                    <input type="number" id="customPpi" value="320" step="1" min="120" max="800">
+                </label>
+                <button class="btn-apply" id="applyCustomDpiBtn">⚡ Terapkan DPI/PPI ⚡</button>
+            </div>
+
+            <!-- DPI Untuk Free Fire spesifik -->
+            <div class="dpi-ff">
+                <span>🎯 DPI Recom buat Free Fire / MAX:</span>
+                <button class="ff-dpi" data-dpi="200">200 (Headshot Biasa)</button>
+                <button class="ff-dpi" data-dpi="260">260 (Headshot Pro)</button>
+                <button class="ff-dpi" data-dpi="350">350 (Auto Headshot)</button>
+                <button class="ff-dpi" data-dpi="500">500 (God Mode)</button>
+            </div>
+
+            <!-- Slider DPI + Live preview -->
+            <div class="dpi-slider-live">
+                <label>🎚️ Slider DPI: <input type="range" id="dpiSliderMaster" min="120" max="800" value="320"></label>
+                <span id="liveDpiPreview">DPI: 320</span>
+                <label>🎚️ Slider PPI: <input type="range" id="ppiSliderMaster" min="120" max="800" value="320"></label>
+                <span id="livePpiPreview">PPI: 320</span>
+                <button class="btn-apply" id="applySliderDpiBtn">Terapkan dari Slider</button>
+            </div>
+
+            <!-- Status DPI & Deteksi FF -->
+            <div class="ff-status" id="ffStatus">🔍 Memindai FreeFire/FF MAX...</div>
+            <div class="dpi-result" id="dpiResult">✨ DPI belum diubah</div>
+        </div>
+
+        <!-- SECTION JOIN GAME + PERFORMANCE + AUTO ID -->
+        <div class="join-section">
+            <div class="section-title">🔥 FREE FIRE / FREE FIRE MAX JOINER 🔥</div>
+            <div class="join-controls">
+                <div class="game-selector">
+                    <button class="game-btn" data-game="ff">Free Fire</button>
+                    <button class="game-btn" data-game="ffmax">Free Fire MAX</button>
+                </div>
+                <div class="performance-select">
+                    <label>🎮 Pilih Performa Main:</label>
+                    <select id="performanceMode">
+                        <option value="ultra">Ultra (60 FPS + High Graphics) 🔥</option>
+                        <option value="balanced">Balanced (30 FPS + Medium) ⚖️</option>
+                        <option value="power_save">Power Save (20 FPS + Low) 🔋</option>
+                        <option value="quantum_boost">QUANTUM BOOST (120 FPS + Unlock All) 🌌</option>
+                    </select>
+                </div>
+                <div class="auto-id-area">
+                    <label>🆔 Auto Generate ID (1 - last downloader):</label>
+                    <div class="id-list" id="idList"></div>
+                    <button class="btn-join" id="joinGameBtn">⚡ JOIN GAME SEKARANG ⚡</button>
+                </div>
+                <div class="join-status" id="joinStatus">⏳ Standby... siap join</div>
+            </div>
+        </div>
+
+        <!-- Tools Grid lainnya -->
+        <div class="tools-grid">
+            <div class="tool-card">
+                <div class="tool-icon">🎮</div>
+                <div class="tool-title">Sensitivity GameLab</div>
+                <div class="sens-control">
+                    <label>General: <input type="range" id="genSen" min="0" max="200" value="100"></label>
+                    <label>Red Dot: <input type="range" id="redSen" min="0" max="200" value="100"></label>
+                    <label>Scope 4x: <input type="range" id="scopeSen" min="0" max="200" value="100"></label>
+                    <button class="btn-apply" id="applySensBtn">Inject Sensitivity 🔥</button>
+                </div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-icon">🧹</div>
+                <div class="tool-title">Quick Cache Cleaner</div>
+                <button class="btn-apply" id="cleanCacheBtn">🧹 Bersihkan Cache</button>
+                <div id="cacheStatus"></div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-icon">🎮</div>
+                <div class="tool-title">Monitoring ROG</div>
+                <div id="rogStats">CPU: --% | RAM: -- | Suhu: --°C</div>
+                <button class="btn-apply" id="startRogBtn">Start Monitor</button>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-icon">📊</div>
+                <div class="tool-title">FPS Visual Emulator</div>
+                <select id="fpsEmuSelect">
+                    <option>60 FPS</option><option>90 FPS</option><option>120 FPS</option><option>240 FPS</option>
+                </select>
+                <button class="btn-apply" id="fpsEmuBtn">Emulate FPS</button>
+                <div id="fpsDisplay">FPS: 0</div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-icon">⚙️</div>
+                <div class="tool-title">Task Manager</div>
+                <ul id="taskList" style="font-size:10px; max-height:100px; overflow-y:auto;"></ul>
+                <button class="btn-apply" id="killBgBtn">Kill Background</button>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-icon">👁️</div>
+                <div class="tool-title">ESP ALL PLAYER</div>
+                <button class="btn-apply" id="enableEspBtn">🔘 Enable ESP</button>
+                <div id="espStatus">ESP: OFF</div>
+            </div>
+        </div>
+
+        <!-- Floating Window + Auto Headshot -->
+        <div id="floatingIcon" class="floating-icon">
+            🎯
+            <span class="tooltip">Auto Headshot</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
