@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    background: radial-gradient(circle at 20% 30%, #0a0f1e, #03060c);
+    font-family: 'Courier New', 'Fira Code', monospace;
+    color: #0ff;
+    overflow-x: hidden;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.quantum-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    border-bottom: 2px solid #0ff;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0 0 5px #0ff;
+}
+
+.badge {
+    background: #0ff22a;
+    color: #000;
+    padding: 4px 12px;
+    border-radius: 40px;
+    font-weight: bold;
+}
+
+.section-title {
+    font-size: 20px;
+    border-left: 4px solid #ff00ff;
+    padding-left: 12px;
+    margin: 20px 0 15px 0;
+    text-shadow: 0 0 3px #ff00ff;
+}
+
+/* DPI MASTER SECTION */
+.dpi-master-section {
+    background: rgba(0, 20, 40, 0.7);
+    border: 1px solid #0ff;
+    border-radius: 16px;
+    padding: 18px;
+    margin-bottom: 20px;
+}
+
+.dpi-presets, .dpi-custom, .dpi-ff, .dpi-slider-live {
+    margin-bottom: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.dpi-presets button, .preset-dpi, .ff-dpi {
+    background: #111;
+    border: 1px solid #0ff;
+    color: #0ff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.dpi-presets button:hover, .preset-dpi:hover, .ff-dpi:hover {
+    background: #0ff;
+    color: #000;
+    box-shadow: 0 0 10px #0ff;
+}
+
+.dpi-custom input, .dpi-slider-live input {
+    background: #222;
+    border: 1px solid #0ff;
+    color: #0ff;
+    padding: 6px;
+    border-radius: 8px;
+    width: 100px;
+}
+
+.btn-apply {
+    background: #ff00ff;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-apply:hover {
+    background: #0ff;
+    color: #000;
+    box-shadow: 0 0 15px #0ff;
+}
+
+.ff-status, .dpi-result, .join-status {
+    margin-top: 12px;
+    padding: 8px;
+    background: #000000aa;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+/* JOIN SECTION */
+.join-section {
+    background: rgba(0, 20, 40, 0.7);
+    border: 1px solid #ff00ff;
+    border-radius: 16px;
+    padding: 18px;
+    margin-bottom: 20px;
+}
+
+.game-selector {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.game-btn {
+    background: #111;
+    border: 1px solid #ff00ff;
+    color: #ff00ff;
+    padding: 8px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.game-btn.active {
+    background: #ff00ff;
+    color: #000;
+}
+
+.performance-select select, .auto-id-area select {
+    background: #222;
+    color: #0ff;
+    border: 1px solid #0ff;
+    padding: 6px;
+    border-radius: 8px;
+    margin-left: 8px;
+}
+
+.id-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.id-item {
+    background: #0ff22a;
+    color: #000;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.btn-join {
+    background: #ff00ff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Tools Grid */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.tool-card {
+    background: rgba(0, 10, 20, 0.8);
+    border: 1px solid #0ff;
+    border-radius: 16px;
+    padding: 15px;
+    transition: 0.2s;
+}
+
+.tool-card:hover {
+    box-shadow: 0 0 12px #0ff;
+}
+
+.tool-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.tool-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff00ff;
+    margin-bottom: 6px;
+}
+
+.tool-desc {
+    font-size: 10px;
+    color: #aaa;
+    margin-bottom: 12px;
+}
+
+.sens-control label {
+    display: block;
+    font-size: 11px;
+    margin: 5px 0;
+}
+
+/* Floating Window */
+.floating-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #ff00ff, #ff0055);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff00ff;
+    z-index: 9999;
+    transition: 0.1s;
+    user-select: none;
+}
+
+.floating-icon:active {
+    transform: scale(0.95);
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    background: #000;
+    color: #0ff;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 10px;
+    white-space: nowrap;
+    display: none;
+}
+
+.floating-icon:hover .tooltip {
+    display: block;
+}
